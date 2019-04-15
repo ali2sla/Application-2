@@ -1,24 +1,48 @@
 
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Application</title>
+        <!-- This meta tag make the text scale correctly on desktop AND mobile browsers. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- This link and 2 scripts load the Bootstrap CSS stylesheet -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
 
 <!-- Create image.-->
-<body style="background-color:whitesmoke;">
-    <div style="display: flex; justify-content: center;">
+    <!-- The nav tag creates a navigation bar at the top. -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cinnamoroll</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span> 
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a class="nav-link" href="simpleHTML/index.html">Information</a></li>
+                        <li><a class="nav-link" href="index.html">Application</a></li>
+                        <li><a class="nav-link" href="moreHTML/index.html">About</a></li> 
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <br>
+
+    <!-- The container div tag puts all later divs into a table-like layout. -->
+    <div class="container-fluid">
+        <div style="display: flex; justify-content: center;">
         <img src="Cinnamoroll_2.png" width="382" height="187" class="center">
-    </div>
+        </div>
 
-<!-- This title gets displayed on the tab -->
-<head>
-        <title>Application</title>
-</head>    
+        <h2 style="text-align:center; color: #66ccff">Application</h2>
+        <h4 style="text-align:center"> An Individual Test</h4>
 
-<h2 style="text-align:center; color: #66ccff">Application</h2>
-<h4 style="text-align:center"> An Individual Test</h4>
-
-<!-- Create personal information section of the quiz.-->
-<table style="border:0px solid black;">
-    <tr>
+        <!-- Create personal information section of the quiz.-->
+        <table style="border:0px solid black;">
+        <tr>
          <!-- Row with 3 columns of text-->
          <td>
             <style>
@@ -68,10 +92,10 @@
                 </style>
                 <label>Year<textarea rows="2" cols="20">YYYY</textarea></label>
         </td>
-    </tr>
-</table>
+        </tr>
+        </table>
 
-<table style="border:0px solid black;">
+        <table style="border:0px solid black;">
     <tr>
          <!-- Row with 3 columns of text-->
          <td>
@@ -112,9 +136,9 @@
                 </select></label>
         </td>
     </tr>
-</table>
+        </table>
 
-<table style="border:0px solid black;">
+        <table style="border:0px solid black;">
     <tr>
         <td>
             <style>    
@@ -149,72 +173,79 @@
             <label> Country: <textarea rows="2" cols="45"></textarea></label>
         </td>
     </tr>
-</table>
+        </table>
 
-<!-- Create multiple choice section of the quiz.-->
-<p> If you were invited to a haunted house for free candy, what would you do?</p>
-<input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
-<input type="radio" name="choice1" value="2"> Party<br>
-<input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
-<input type="radio" name="choice1" value="4"> Not go<br>
+        <!-- Create multiple choice section of the quiz.-->
+        <p> If you were invited to a haunted house for free candy, what would you do?</p>
+        <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
+        <input type="radio" name="choice1" value="2"> Party<br>
+        <input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
+        <input type="radio" name="choice1" value="4"> Not go<br>
 
-<p> In a horror movie, who would you suspect of being the murderer?</p>
-<input type="radio" name="choice2" value="5"> The husband<br>
-<input type="radio" name="choice2" value="6"> The wife<br>
-<input type="radio" name="choice2" value="7"> The neighbor<br>
-<input type="radio" name="choice2" value="8"> The dog<br>
+        <p> In a horror movie, who would you suspect of being the murderer?</p>
+        <input type="radio" name="choice2" value="5"> The husband<br>
+        <input type="radio" name="choice2" value="6"> The wife<br>
+        <input type="radio" name="choice2" value="7"> The neighbor<br>
+        <input type="radio" name="choice2" value="8"> The dog<br>
 
-<p> How would you shop for Christmas presents?</p>
-<input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
-<input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
-<input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
-<input type="radio" name="choice3" value="12"> Not buy anything<br>
+        <p> How would you shop for Christmas presents?</p>
+        <input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
+        <input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
+        <input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
+        <input type="radio" name="choice3" value="12"> Not buy anything<br>
 
-<p> Which of the following things would you do as a pirate?</p>
-<input type="radio" name="choice4" value="13"> Get scurvy<br>
-<input type="radio" name="choice4" value="14"> Party with crew members<br>
-<input type="radio" name="choice4" value="15"> Walk the plank<br>
-<input type="radio" name="choice4" value="16"> Raid other pirates<br>
+        <p> Which of the following things would you do as a pirate?</p>
+        <input type="radio" name="choice4" value="13"> Get scurvy<br>
+        <input type="radio" name="choice4" value="14"> Party with crew members<br>
+        <input type="radio" name="choice4" value="15"> Walk the plank<br>
+        <input type="radio" name="choice4" value="16"> Raid other pirates<br>
 
-<p> What would you do when there is a castle raid?</p>
-<input type="radio" name="choice5" value="17"> Ride away with your horse<br>
-<input type="radio" name="choice5" value="18"> Record it on <br>
-<input type="radio" name="choice5" value="19"> Warn the king about it<br>
-<input type="radio" name="choice6" value="20"> Go raiding the castle<br>
+        <p> What would you do when there is a castle raid?</p>
+        <input type="radio" name="choice5" value="17"> Ride away with your horse<br>
+        <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
+        <input type="radio" name="choice5" value="19"> Warn the king about it<br>
+        <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
 
-<!-- Create open response section of the quiz.-->
-<p> Describe yourself as a person (200 words or fewer).</p>
-<textarea rows="10" cols="175">
-</textarea>
+        <!-- Create open response section of the quiz.-->
+        <form>
+            <div class="form-group">
+                <label for="knowledge">Describe yourself as a person (200 words or fewer).</label>
+                <textarea class="form-control" id="knowledge" rows="10"></textarea>
+            </div>
 
-<p> If you have twenty four hours to live, what would you do? (200 words or fewer).</p>
-<textarea rows="10" cols="175">
-</textarea>
+            <div class="form-group">
+                <label for="skills">If you have twenty four hours to live, what would you do? (200 words or fewer)</label>
+                <textarea class="form-control" id="skills" rows="10"></textarea>
+            </div>
 
-<p> What was one crazy experience you remember? (200 words or fewer).</p>
-<textarea rows="10" cols="175">
-</textarea>
+            <div class="form-group">
+                <label for="different">What was one crazy experience you remember? (200 words or fewer)</label>
+                <textarea class="form-control" id="different" rows="10"></textarea>
+            </div>
 
-<p> If you can travel back in time, what time period woulds you travel to? (200 words or fewer).</p>
-<textarea rows="10" cols="175">
-</textarea>
+            <div class="form-group">
+                <label for="accomplishment">If you can travel back in time, what time period would you travel to? (200 words or fewer)</label>
+                <textarea class="form-control" id="accomplishment" rows="10"></textarea>
+            </div>
 
-<p> Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer).</p>
-<textarea rows="10" cols="175">
-</textarea>
+            <div class="form-group">
+                <label for="improve">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
+                <textarea class="form-control" id="improve" rows="10"></textarea>
+            </div>            
+        </form>
 
-<!-- Terms and Service Link-->
-<table style="border:0px solid black;">
-<style>
+    <!-- Terms and Service Link-->
+        <table style="border:0px solid black;">
+    <style>
     label textarea{
      vertical-align: middle;
     }
     </style>
     <input type="checkbox"><label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
-</table>
+        </table>
 
-<!-- Create submit button-->
-<button type="button" onclick="alert('Thank you for applying!')">Submit</button>
-
-</body>
+    <!-- Create submit button-->
+        <button type="button" onclick="alert('Thank you for applying!')">Submit</button>
+        </div>
+    </body>
 </html>
