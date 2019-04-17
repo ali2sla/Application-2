@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Application</title>
+        <title>Cinnamoroll Application Simulation</title>
         <!-- This meta tag make the text scale correctly on desktop AND mobile browsers. -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,141 +40,81 @@
         <h2 style="text-align:center; color: #66ccff">Application</h2>
         <h4 style="text-align:center"> An Individual Test</h4>
 
+    <form>
         <!-- Create personal information section of the quiz.-->
-        <table style="border:0px solid black;">
-        <tr>
-         <!-- Row with 3 columns of text-->
-         <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>First Name: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Middle Initial: <textarea rows="2" cols="10"></textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Last Name: <textarea rows="2" cols="33"></textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Date of Birth: Month<textarea rows="2" cols="20">MM</textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: bottom;
-                }
-                </style>
-                <label>Day<textarea rows="2" cols="20">DD</textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Year<textarea rows="2" cols="20">YYYY</textarea></label>
-        </td>
-        </tr>
-        </table>
+        <div class="container">
+         <!-- Rows of textboxes-->
+         <div class="row">
+            <div class="col-2">
+                <label for="knowledge">First Name:</label>
+                <textarea class="form-control" id="knowledge" rows="1"></textarea>
+            </div>
+            <div class="col">
+                <label for="knowledge">Middle initial:</label>
+                <textarea class="form-control" id="knowledge" rows="1"></textarea>
+            </div>
+            <div class="col-2">
+                <label for="knowledge">Last Name:</label>
+                <textarea class="form-control" id="knowledge" rows="1"></textarea>
+            </div>
+            <div class="col">
+                <label for="knowledge">Date of Birth: Month:</label>
+                <textarea class="form-control" id="knowledge" rows="1">MM</textarea>
+            </div>
+            <div class="col">
+                <label for="knowledge">Day:</label>
+                <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+            </div>
+            <div class="col">
+                <label for="knowledge">Year:</label>
+                <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                    <label for="knowledge">Address:</label>
+                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+            <div class="col">
+                        <label for="knowledge">Email Address:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+            <div class="col">
+                        <label for="knowledge">Phone Number:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+            <div class="col">
+                <label for="knowledge">Gender:</label>
+                    <select class="form-control" id="knowledge">
+                        <option value="s">Select gender:</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                        <option value="o">Other</option>
+                        </select>  
+                </div>
+            </div>
+        <div class="row">
+                <div class="col">
+                        <label for="knowledge">City:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
+                <div class="col">
+                            <label for="knowledge">State/Province/Region:</label>
+                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
+                <div class="col">
+                            <label for="knowledge">Zip code:</label>
+                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
+                <div class="col">
+                            <label for="knowledge">Country:</label>
+                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
+            </div>
+        </div>
+    </form>
 
-        <table style="border:0px solid black;">
-    <tr>
-         <!-- Row with 3 columns of text-->
-         <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Address: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-         <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Email Address: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-        <td>
-            <style>
-                label textarea{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Phone Number: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-        <td>
-            <style>
-                label select{
-                 vertical-align: middle;
-                }
-                </style>
-                <label>Gender: 
-                <select>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select></label>
-        </td>
-    </tr>
-        </table>
-
-        <table style="border:0px solid black;">
-    <tr>
-        <td>
-            <style>    
-            label textarea{
-            vertical-align: middle;
-            }
-            </style>
-            <label> City: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-        <td>
-            <style>    
-            label textarea{
-            vertical-align: middle;
-            }
-            </style>
-            <label> State/Province/Region: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-        <td>
-            <style>    
-            label textarea{
-            vertical-align: middle;
-            }
-            </style>
-            <label> Zip code: <textarea rows="2" cols="25"></textarea></label>
-        </td>
-        <td>
-            <style>    
-            label textarea{
-            vertical-align: middle;
-            }
-            </style>
-            <label> Country: <textarea rows="2" cols="45"></textarea></label>
-        </td>
-    </tr>
-        </table>
-
+    <form>
         <!-- Create multiple choice section of the quiz.-->
         <p> If you were invited to a haunted house for free candy, what would you do?</p>
         <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
@@ -205,6 +145,7 @@
         <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
         <input type="radio" name="choice5" value="19"> Warn the king about it<br>
         <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
+    </form>
 
         <!-- Create open response section of the quiz.-->
         <form>
