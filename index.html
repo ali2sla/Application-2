@@ -45,15 +45,15 @@
         <div class="container">
          <!-- Rows of textboxes-->
          <div class="row">
-            <div class="col-2">
+            <div class="col">
                 <label for="knowledge">First Name:</label>
                 <textarea class="form-control" id="knowledge" rows="1"></textarea>
             </div>
-            <div class="col">
+            <div class="col-2">
                 <label for="knowledge">Middle initial:</label>
                 <textarea class="form-control" id="knowledge" rows="1"></textarea>
             </div>
-            <div class="col-2">
+            <div class="col">
                 <label for="knowledge">Last Name:</label>
                 <textarea class="form-control" id="knowledge" rows="1"></textarea>
             </div>
@@ -179,11 +179,14 @@
 
     <!-- Terms and Service Link-->
     <div class="col">
-    <input type="checkbox"> <label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
+    <label class="container">I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
         </div>
     <br>
 <div>
-    
+
     <!-- Create submit button-->
         <button type="button" class="btn btn-primary btn-lg btn-block" onclick="alert('Thank you for applying!')">Submit</button>
         </div>
