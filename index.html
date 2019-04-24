@@ -112,81 +112,76 @@
                     </div>
             </div>
         </div>
-    </form>
-
-    <form>
+        <br>
+        <div class="container">
         <!-- Create multiple choice section of the quiz.-->
-        <p> If you were invited to a haunted house for free candy, what would you do?</p>
+        <label for="skills">If you were invited to a haunted house for free candy, what would you do?</label>
         <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
         <input type="radio" name="choice1" value="2"> Party<br>
         <input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
         <input type="radio" name="choice1" value="4"> Not go<br>
-
+        <br>
         <p> In a horror movie, who would you suspect of being the murderer?</p>
         <input type="radio" name="choice2" value="5"> The husband<br>
         <input type="radio" name="choice2" value="6"> The wife<br>
         <input type="radio" name="choice2" value="7"> The neighbor<br>
         <input type="radio" name="choice2" value="8"> The dog<br>
-
+        <br>
         <p> How would you shop for Christmas presents?</p>
         <input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
         <input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
         <input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
         <input type="radio" name="choice3" value="12"> Not buy anything<br>
-
+        <br>
         <p> Which of the following things would you do as a pirate?</p>
         <input type="radio" name="choice4" value="13"> Get scurvy<br>
         <input type="radio" name="choice4" value="14"> Party with crew members<br>
         <input type="radio" name="choice4" value="15"> Walk the plank<br>
         <input type="radio" name="choice4" value="16"> Raid other pirates<br>
-
+        <br>
         <p> What would you do when there is a castle raid?</p>
         <input type="radio" name="choice5" value="17"> Ride away with your horse<br>
         <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
         <input type="radio" name="choice5" value="19"> Warn the king about it<br>
         <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
-    </form>
+        </div>
+        <br>
 
         <!-- Create open response section of the quiz.-->
-        <form>
-            <div class="form-group">
+        <div class="col">
                 <label for="knowledge">Describe yourself as a person (200 words or fewer).</label>
                 <textarea class="form-control" id="knowledge" rows="10"></textarea>
             </div>
 
-            <div class="form-group">
+        <div class="col">
                 <label for="skills">If you have twenty four hours to live, what would you do? (200 words or fewer)</label>
                 <textarea class="form-control" id="skills" rows="10"></textarea>
             </div>
 
-            <div class="form-group">
+        <div class="col">
                 <label for="different">What was one crazy experience you remember? (200 words or fewer)</label>
                 <textarea class="form-control" id="different" rows="10"></textarea>
             </div>
 
-            <div class="form-group">
+        <div class="col">
                 <label for="accomplishment">If you can travel back in time, what time period would you travel to? (200 words or fewer)</label>
                 <textarea class="form-control" id="accomplishment" rows="10"></textarea>
             </div>
 
-            <div class="form-group">
+        <div class="col">
                 <label for="improve">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
                 <textarea class="form-control" id="improve" rows="10"></textarea>
             </div>            
-        </form>
-
+        <br>
     <!-- Terms and Service Link-->
-        <table style="border:0px solid black;">
-    <style>
-    label textarea{
-     vertical-align: middle;
-    }
-    </style>
-    <input type="checkbox"><label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
-        </table>
-
-    <!-- Create submit button-->
-        <button type="button" onclick="alert('Thank you for applying!')">Submit</button>
+    <div class="col">
+    <input type="checkbox"> <label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
         </div>
+    <br>
+<div>
+    <!-- Create submit button-->
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="alert('Thank you for applying!')">Submit</button>
+        </div>
+        </form>
     </body>
 </html>
