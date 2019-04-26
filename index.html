@@ -42,152 +42,207 @@
 
     <form>
         <!-- Create personal information section of the quiz.-->
-        <div class="container">
-         <!-- Rows of textboxes-->
-         <div class="row">
-            <div class="col">
-                <label for="knowledge">First Name:</label>
-                <textarea class="form-control" id="knowledge" rows="1"></textarea>
-            </div>
-            <div class="col-2">
-                <label for="knowledge">Middle initial:</label>
-                <textarea class="form-control" id="knowledge" rows="1"></textarea>
-            </div>
-            <div class="col">
-                <label for="knowledge">Last Name:</label>
-                <textarea class="form-control" id="knowledge" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <label for="knowledge">Gender:</label>
-                    <select class="form-control" id="knowledge">
-                        <option value="s">Select gender:</option>
-                        <option value="m">Male</option>
-                        <option value="f">Female</option>
-                        <option value="o">Other</option>
-                    </select>  
+            <form id="set1">
+                <div class="form-group">
+        <!-- Create rows of textboxes-->
+                <div class="row">
+                    <div class="col">
+                        <label for="knowledge">First Name:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        </div>
+                    <div class="col-2">
+                        <label for="knowledge">Middle initial:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
+                        <div class="col">
+                        <label for="knowledge">Last Name:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
                 </div>
-            <div class="col">
-                <label for="knowledge">DOB Month:</label>
-                <textarea class="form-control" id="knowledge" rows="1">MM</textarea>
-            </div>
-            <div class="col">
-                <label for="knowledge">Day:</label>
-                <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
-            </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="knowledge">Gender:</label>
+                        <select class="form-control" id="knowledge">
+                            <option value="s">Select gender:</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                            <option value="o">Other</option>
+                        </select>  
+                    </div>
+                    <div class="col">
+                        <label for="knowledge">DOB Month:</label>
+                        <textarea class="form-control" id="knowledge" rows="1">MM</textarea>
+                    </div>
+                    <div class="col">
+                        <label for="knowledge">Day:</label>
+                        <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+                    </div>
+                    <div class="col">
+                        <label for="knowledge">Year:</label>
+                        <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="knowledge">Address:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    </div>
                 <div class="col">
-                    <label for="knowledge">Year:</label>
-                    <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
-                </div>
-            </div>
-        <div class="row">
-            <div class="col">
-                    <label for="knowledge">Address:</label>
+                    <label for="knowledge">Email Address:</label>
                     <textarea class="form-control" id="knowledge" rows="1"></textarea>
                 </div>
-            <div class="col">
-                        <label for="knowledge">Email Address:</label>
+                <div class="col">
+                    <label for="knowledge">Phone Number:</label>
+                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="knowledge">City:</label>
+                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+                <div class="col">
+                        <label for="knowledge">State/Province/Region:</label>
                         <textarea class="form-control" id="knowledge" rows="1"></textarea>
                 </div>
-            <div class="col">
-                        <label for="knowledge">Phone Number:</label>
+                <div class="col">
+                        <label for="knowledge">Zip code:</label>
+                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                </div>
+                <div class="col">
+                        <label for="knowledge">Country:</label>
                         <textarea class="form-control" id="knowledge" rows="1"></textarea>
                 </div>
             </div>
-        <div class="row">
-                <div class="col">
-                        <label for="knowledge">City:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
-                    </div>
-                <div class="col">
-                            <label for="knowledge">State/Province/Region:</label>
-                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
-                    </div>
-                <div class="col">
-                            <label for="knowledge">Zip code:</label>
-                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
-                    </div>
-                <div class="col">
-                            <label for="knowledge">Country:</label>
-                            <textarea class="form-control" id="knowledge" rows="1"></textarea>
-                    </div>
+                </div>
+            <br>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="next1" onclick="displayNextQuestions(1)">Next</button>
+    </form>
+
+    <form id="set2" style="display:none;">
+            <div class="form-group">
+    <!-- Create multiple choice section of the quiz.-->
+            <p>If you were invited to a haunted house for free candy, what would you do?</p>
+            <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
+            <input type="radio" name="choice1" value="2"> Party<br>
+            <input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
+            <input type="radio" name="choice1" value="4"> Not go<br>
+            <br>
+            <p> In a horror movie, who would you suspect of being the murderer?</p>
+            <input type="radio" name="choice2" value="5"> The husband<br>
+            <input type="radio" name="choice2" value="6"> The wife<br>
+            <input type="radio" name="choice2" value="7"> The neighbor<br>
+            <input type="radio" name="choice2" value="8"> The dog<br>
+            <br>
+            <p> How would you shop for Christmas presents?</p>
+            <input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
+            <input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
+            <input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
+            <input type="radio" name="choice3" value="12"> Not buy anything<br>
+            <br>
+            <p> Which of the following things would you do as a pirate?</p>
+            <input type="radio" name="choice4" value="13"> Get scurvy<br>
+            <input type="radio" name="choice4" value="14"> Party with crew members<br>
+            <input type="radio" name="choice4" value="15"> Walk the plank<br>
+            <input type="radio" name="choice4" value="16"> Raid other pirates<br>
+            <br>
+            <p> What would you do when there is a castle raid?</p>
+            <input type="radio" name="choice5" value="17"> Ride away with your horse<br>
+            <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
+            <input type="radio" name="choice5" value="19"> Warn the king about it<br>
+            <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
             </div>
-        </div>
-        <br>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="next2" onclick="displayNextQuestions(2)">Next</button>
+        </form>
 
-        <div class="container">
-        <!-- Create multiple choice section of the quiz.-->
-        <p>If you were invited to a haunted house for free candy, what would you do?</p>
-        <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
-        <input type="radio" name="choice1" value="2"> Party<br>
-        <input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
-        <input type="radio" name="choice1" value="4"> Not go<br>
-        <br>
-        <p> In a horror movie, who would you suspect of being the murderer?</p>
-        <input type="radio" name="choice2" value="5"> The husband<br>
-        <input type="radio" name="choice2" value="6"> The wife<br>
-        <input type="radio" name="choice2" value="7"> The neighbor<br>
-        <input type="radio" name="choice2" value="8"> The dog<br>
-        <br>
-        <p> How would you shop for Christmas presents?</p>
-        <input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
-        <input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
-        <input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
-        <input type="radio" name="choice3" value="12"> Not buy anything<br>
-        <br>
-        <p> Which of the following things would you do as a pirate?</p>
-        <input type="radio" name="choice4" value="13"> Get scurvy<br>
-        <input type="radio" name="choice4" value="14"> Party with crew members<br>
-        <input type="radio" name="choice4" value="15"> Walk the plank<br>
-        <input type="radio" name="choice4" value="16"> Raid other pirates<br>
-        <br>
-        <p> What would you do when there is a castle raid?</p>
-        <input type="radio" name="choice5" value="17"> Ride away with your horse<br>
-        <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
-        <input type="radio" name="choice5" value="19"> Warn the king about it<br>
-        <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
-        </div>
-        <br>
-
+    <form id="set3" style="display:none;">
+        <div class="form-group">
         <!-- Create open response section of the quiz.-->
-        <div class="col">
+            <div class="col">
                 <label for="knowledge">Describe yourself as a person (200 words or fewer).</label>
                 <textarea class="form-control" id="knowledge" rows="10"></textarea>
             </div>
         <br>
-        <div class="col">
+            <div class="col">
                 <label for="skills">If you have twenty four hours to live, what would you do? (200 words or fewer)</label>
                 <textarea class="form-control" id="skills" rows="10"></textarea>
             </div>
         <br>
-        <div class="col">
+            <div class="col">
                 <label for="different">What was one crazy experience you remember? (200 words or fewer)</label>
                 <textarea class="form-control" id="different" rows="10"></textarea>
             </div>
         <br>
-        <div class="col">
+            <div class="col">
                 <label for="accomplishment">If you can travel back in time, what time period would you travel to? (200 words or fewer)</label>
                 <textarea class="form-control" id="accomplishment" rows="10"></textarea>
             </div>
         <br>
-        <div class="col">
+            <div class="col">
                 <label for="improve">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
                 <textarea class="form-control" id="improve" rows="10"></textarea>
-            </div>            
+            </div>
+            <br>   
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="next4" onclick="done()">Submit</button>
+        </div>
+    </form>
+
+    <form id="set4" style="display:none;">
+        <!-- Terms and Service Link-->
+            <div class="col">
+                <input type="checkbox"> <label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
+            </div>
+            <br>
+
+        <!-- Create submit button-->
         <br>
-
-    <!-- Terms and Service Link-->
-    <div class="col">
-    <input type="checkbox"> <label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
         </div>
-    <br>
-<div>
-
-    <!-- Create submit button-->
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="alert('Thank you for applying!')">Submit</button>
+    </form>
+        <br>
+        <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display:none;">
+                Thank you for applying!
         </div>
+    </div>
 
-        </form>
+        <!-- Create script for next buttons-->
+        <script>
+                function displayNextQuestions(set) {
+                    // set is which set of questions was just displayed
+                    if (set > 0 && set < 5) {
+                        // stop displaying the current next button 
+                        var lastButton = document.getElementById("next"+set);
+                        lastButton.style.display = "none";
+                        // start displaying the next set (questions+button)
+                        var nextQuestions = document.getElementById("set"+(set+1));
+                        nextQuestions.style.display = "block";
+                        // automatically scroll down to new questions
+                        window.location = "#set"+(set+1);
+                    }
+                }
+                function done() {
+                    // Require feedback or explanation for no feedback
+                    var feedbackAnswer = document.getElementById("feedback").value;
+                    if (feedbackAnswer === "" || feedbackAnswer.toLowerCase() === "n/a") {
+                        var whyNoFeedbackAnswer = document.getElementById("whyNoFeedback").value;
+                        if (whyNoFeedbackAnswer === "") {
+                            displayNextQuestions(4);
+                            return;
+                        }
+                    }
+                    // let user know that these answers are DISAPPEARING FOREVER
+                    alert('Where do these answers get stored?');
+                    // stop displaying all of the alerts, questions, and buttons 
+                    for (var i = 0; i < 6; i = i + 1) {
+                        var nextQuestions = document.getElementById("set"+i);
+                        nextQuestions.style.display = "none";
+                    }
+                    // start displaying the thanks alert
+                    var thanksAlert = document.getElementById("thanks");
+                    thanksAlert.style.display = "block";
+                }
+        </script>
     </body>
 </html>
