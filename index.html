@@ -223,19 +223,11 @@
                     }
                 }
                 function done() {
-                    // Require feedback or explanation for no feedback
-                    var feedbackAnswer = document.getElementById("feedback").value;
-                    if (feedbackAnswer === "" || feedbackAnswer.toLowerCase() === "n/a") {
-                        var whyNoFeedbackAnswer = document.getElementById("whyNoFeedback").value;
-                        if (whyNoFeedbackAnswer === "") {
-                            displayNextQuestions(4);
-                            return;
-                        }
-                    }
+            
                     // let user know that these answers are DISAPPEARING FOREVER
                     alert('Where do these answers get stored?');
                     // stop displaying all of the alerts, questions, and buttons 
-                    for (var i = 0; i < 6; i = i + 1) {
+                    for (var i = 0; i < 5; i = i + 1) {
                         var nextQuestions = document.getElementById("set"+i);
                         nextQuestions.style.display = "none";
                     }
