@@ -197,11 +197,10 @@
 
         <!-- Create submit button-->
         <br>
-        <div>
             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
-        </div>
     </form>
 
+        <!-- Create a page saying "thank you"-->
         <br>
         <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display:none;">
                 Thank you for applying!
@@ -209,10 +208,11 @@
     </div>
 
         <!-- Create script for next buttons-->
+        
         <script>
                 function displayNextQuestions(set) {
                     // set is which set of questions was just displayed
-                    if (set > 0 && set < 5) {
+                    if (set > 0 && set < 6) {
                         // stop displaying the current next button 
                         var lastButton = document.getElementById("next"+set);
                         lastButton.style.display = "none";
