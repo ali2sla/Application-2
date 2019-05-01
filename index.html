@@ -200,7 +200,7 @@
     </form>
 
         <!-- Create a page saying "thank you"-->
-        <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display: block;">
+        <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display:none;">
                 Thank you for applying!
         </div>
     </div>
@@ -222,11 +222,11 @@
                 }
             }
 
-                function done() {
+            function done() {
                 // let user know that these answers are DISAPPEARING FOREVER
                 alert('Where do these answers get stored?');
                 // stop displaying all of the alerts, questions, and buttons 
-                for (var i = 0; i < 5; i = i + 1) {
+                for (var i = 1; i < 5; i = i + 1) {
                     var nextQuestions = document.getElementById("set"+i);
                     nextQuestions.style.display = "none";
                 }
