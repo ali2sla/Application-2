@@ -208,32 +208,32 @@
         <!-- Create script for next buttons-->
         
         <script>
-                function displayNextQuestions(set) {
-                    // set is which set of questions was just displayed
-                    if (set > 0 && set < 4) {
-                        // stop displaying the current next button 
-                        var lastButton = document.getElementById("next"+set);
-                        lastButton.style.display = "none";
-                        // start displaying the next set (questions+button)
-                        var nextQuestions = document.getElementById("set"+(set+1));
-                        nextQuestions.style.display = "block";
-                        // automatically scroll down to new questions
-                        window.location = "#set"+(set+1);
-                    }
+            function displayNextQuestions(set) {
+                // set is which set of questions was just displayed
+                if (set > 0 && set < 5) {
+                    // stop displaying the current next button 
+                    var lastButton = document.getElementById("next"+set);
+                    lastButton.style.display = "none";
+                    // start displaying the next set (questions+button)
+                    var nextQuestions = document.getElementById("set"+(set+1));
+                    nextQuestions.style.display = "block";
+                    // automatically scroll down to new questions
+                    window.location = "#set"+(set+1);
                 }
+            }
+
                 function done() {
-            
-                    // let user know that these answers are DISAPPEARING FOREVER
-                    alert('Where do these answers get stored?');
-                    // stop displaying all of the alerts, questions, and buttons 
-                    for (var i = 0; i < 5; i = i + 1) {
-                        var nextQuestions = document.getElementById("set"+i);
-                        nextQuestions.style.display = "none";
-                    }
-                    // start displaying the thanks alert
-                    var thanksAlert = document.getElementById("thanks");
-                    thanksAlert.style.display = "block";
+                // let user know that these answers are DISAPPEARING FOREVER
+                alert('Where do these answers get stored?');
+                // stop displaying all of the alerts, questions, and buttons 
+                for (var i = 0; i < 5; i = i + 1) {
+                    var nextQuestions = document.getElementById("set"+i);
+                    nextQuestions.style.display = "none";
                 }
+                // start displaying the thanks alert
+                var thanksAlert = document.getElementById("thanks");
+                thanksAlert.style.display = "block";
+            }
         </script>
     </body>
 </html>
