@@ -40,28 +40,33 @@
         <h2 style="text-align:center; color: #66ccff">Application</h2>
         <h4 style="text-align:center"> An Individual Test</h4>
 
+        <div id="restored" class="alert alert-primary" role="alert" style="display:none;">
+            Text input succesfully restored from previous usage.
+        </div>
+
         <!-- Create personal information section of the quiz.-->
-            <form id="set1">
+            <form id="set1" onsubmit="saveToLocalStorage()">
                 <div class="form-group">
+
         <!-- Create rows of textboxes-->
                 <div class="row">
                     <div class="col">
-                        <label for="knowledge">First Name:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information1">First Name:</label>
+                        <textarea class="form-control" id="information1" rows="1"></textarea>
                         </div>
                     <div class="col-2">
-                        <label for="knowledge">Middle initial:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information2">Middle initial:</label>
+                        <textarea class="form-control" id="information2" rows="1"></textarea>
                     </div>
                         <div class="col">
-                        <label for="knowledge">Last Name:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information3">Last Name:</label>
+                        <textarea class="form-control" id="information3" rows="1"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="knowledge">Gender:</label>
-                        <select class="form-control" id="knowledge">
+                        <label for="information4">Gender:</label>
+                        <select class="form-control" id="information4">
                             <option value="s">Select gender:</option>
                             <option value="m">Male</option>
                             <option value="f">Female</option>
@@ -69,139 +74,145 @@
                         </select>  
                     </div>
                     <div class="col">
-                        <label for="knowledge">DOB Month:</label>
-                        <textarea class="form-control" id="knowledge" rows="1">MM</textarea>
+                        <label for="information5">DOB Month:</label>
+                        <textarea class="form-control" id="information5" rows="1">MM</textarea>
                     </div>
                     <div class="col">
-                        <label for="knowledge">Day:</label>
-                        <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+                        <label for="information6">Day:</label>
+                        <textarea class="form-control" id="information7" rows="1">DD</textarea>
                     </div>
                     <div class="col">
-                        <label for="knowledge">Year:</label>
-                        <textarea class="form-control" id="knowledge" rows="1">DD</textarea>
+                        <label for="information8">Year:</label>
+                        <textarea class="form-control" id="information8" rows="1">DD</textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="knowledge">Address:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information9">Address:</label>
+                        <textarea class="form-control" id="information9" rows="1"></textarea>
                     </div>
                 <div class="col">
-                    <label for="knowledge">Email Address:</label>
-                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    <label for="information10">Email Address:</label>
+                    <textarea class="form-control" id="information10" rows="1"></textarea>
                 </div>
                 <div class="col">
-                    <label for="knowledge">Phone Number:</label>
-                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    <label for="information11">Phone Number:</label>
+                    <textarea class="form-control" id="information11" rows="1"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="knowledge">City:</label>
-                    <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                    <label for="information12">City:</label>
+                    <textarea class="form-control" id="information12" rows="1"></textarea>
                 </div>
                 <div class="col">
-                        <label for="knowledge">State/Province/Region:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information13">State/Province/Region:</label>
+                        <textarea class="form-control" id="information13" rows="1"></textarea>
                 </div>
                 <div class="col">
-                        <label for="knowledge">Zip code:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information14">Zip code:</label>
+                        <textarea class="form-control" id="information14" rows="1"></textarea>
                 </div>
                 <div class="col">
-                        <label for="knowledge">Country:</label>
-                        <textarea class="form-control" id="knowledge" rows="1"></textarea>
+                        <label for="information15">Country:</label>
+                        <textarea class="form-control" id="information15" rows="1"></textarea>
                 </div>
             </div>
                 </div>
             <br>
-                <button type="button" class="btn btn-primary btn-lg btn-block" id="next1" onclick="displayNextQuestions(1)">Next</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="next1" onclick="displayNextQuestions(1)">Next</button>
             <br>
     </form>
 
-    <form id="set2" style="display:none;">
+    <form id="set2" onsubmit="saveToLocalStorage()" style="display:none;">
             <div class="form-group">
     <!-- Create multiple choice section of the quiz.-->
             <p>If you were invited to a haunted house for free candy, what would you do?</p>
-            <input type="radio" name="choice1" value="1"> Go there for five seconds and then run<br>
-            <input type="radio" name="choice1" value="2"> Party<br>
-            <input type="radio" name="choice1" value="3"> Enjoy the moment and explore the house<br>
-            <input type="radio" name="choice1" value="4"> Not go<br>
+            <input type="radio" id="choice1" value="1"> Go there for five seconds and then run<br>
+            <input type="radio" id="choice1" value="2"> Party<br>
+            <input type="radio" id="choice1" value="3"> Enjoy the moment and explore the house<br>
+            <input type="radio" id="choice1" value="4"> Not go<br>
             <br>
             <p> In a horror movie, who would you suspect of being the murderer?</p>
-            <input type="radio" name="choice2" value="5"> The husband<br>
-            <input type="radio" name="choice2" value="6"> The wife<br>
-            <input type="radio" name="choice2" value="7"> The neighbor<br>
-            <input type="radio" name="choice2" value="8"> The dog<br>
+            <input type="radio" id="choice2" value="5"> The husband<br>
+            <input type="radio" id="choice2" value="6"> The wife<br>
+            <input type="radio" id="choice2" value="7"> The neighbor<br>
+            <input type="radio" id="choice2" value="8"> The dog<br>
             <br>
             <p> How would you shop for Christmas presents?</p>
-            <input type="radio" name="choice3" value="9"> Shop for the cheapest items<br>
-            <input type="radio" name="choice3" value="10"> Buy whatever that person wants<br>
-            <input type="radio" name="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
-            <input type="radio" name="choice3" value="12"> Not buy anything<br>
+            <input type="radio" id="choice3" value="9"> Shop for the cheapest items<br>
+            <input type="radio" id="choice3" value="10"> Buy whatever that person wants<br>
+            <input type="radio" id="choice3" value="11"> Just buy anything expensive/luxurious enough<br>
+            <input type="radio" id="choice3" value="12"> Not buy anything<br>
             <br>
             <p> Which of the following things would you do as a pirate?</p>
-            <input type="radio" name="choice4" value="13"> Get scurvy<br>
-            <input type="radio" name="choice4" value="14"> Party with crew members<br>
-            <input type="radio" name="choice4" value="15"> Walk the plank<br>
-            <input type="radio" name="choice4" value="16"> Raid other pirates<br>
+            <input type="radio" id="choice4" value="13"> Get scurvy<br>
+            <input type="radio" id="choice4" value="14"> Party with crew members<br>
+            <input type="radio" id="choice4" value="15"> Walk the plank<br>
+            <input type="radio" id="choice4" value="16"> Raid other pirates<br>
             <br>
             <p> What would you do when there is a castle raid?</p>
-            <input type="radio" name="choice5" value="17"> Ride away with your horse<br>
-            <input type="radio" name="choice5" value="18"> Record it on YouTube.<br>
-            <input type="radio" name="choice5" value="19"> Warn the king about it<br>
-            <input type="radio" name="choice5" value="20"> Go raiding the castle<br>
+            <input type="radio" id="choice5" value="17"> Ride away with your horse<br>
+            <input type="radio" id="choice5" value="18"> Record it on YouTube.<br>
+            <input type="radio" id="choice5" value="19"> Warn the king about it<br>
+            <input type="radio" id="choice5" value="20"> Go raiding the castle<br>
             </div>
             <br>
-            <button type="button" class="btn btn-primary btn-lg btn-block" id="next2" onclick="displayNextQuestions(2)">Next</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="next2" onclick="displayNextQuestions(2)">Next</button>
             <br>
         </form>
 
-    <form id="set3" style="display:none;">
+    <form id="set3" onsubmit="saveToLocalStorage()" style="display:none;">
         <div class="form-group">
         <!-- Create open response section of the quiz.-->
             <div class="col">
-                <label for="knowledge">Describe yourself as a person (200 words or fewer).</label>
-                <textarea class="form-control" id="knowledge" rows="10"></textarea>
+                <label for="response1">Describe yourself as a person (200 words or fewer).</label>
+                <textarea class="form-control" id="response1" rows="10"></textarea>
             </div>
         <br>
             <div class="col">
-                <label for="skills">If you have twenty four hours to live, what would you do? (200 words or fewer)</label>
-                <textarea class="form-control" id="skills" rows="10"></textarea>
+                <label for="response2">If you have twenty four hours to live, what would you do? (200 words or fewer)</label>
+                <textarea class="form-control" id="response2" rows="10"></textarea>
             </div>
         <br>
             <div class="col">
-                <label for="different">What was one crazy experience you remember? (200 words or fewer)</label>
-                <textarea class="form-control" id="different" rows="10"></textarea>
+                <label for="response3">What was one crazy experience you remember? (200 words or fewer)</label>
+                <textarea class="form-control" id="response3" rows="10"></textarea>
             </div>
         <br>
             <div class="col">
-                <label for="accomplishment">If you can travel back in time, what time period would you travel to? (200 words or fewer)</label>
-                <textarea class="form-control" id="accomplishment" rows="10"></textarea>
+                <label for="response4">If you can travel back in time, what time period would you travel to? (200 words or fewer)</label>
+                <textarea class="form-control" id="response4" rows="10"></textarea>
             </div>
         <br>
             <div class="col">
-                <label for="improve">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
-                <textarea class="form-control" id="improve" rows="10"></textarea>
+                <label for="response5">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
+                <textarea class="form-control" id="response5" rows="10"></textarea>
             </div>
             <br>
-            <button type="button" class="btn btn-primary btn-lg btn-block" id="next3" onclick="displayNextQuestions(3)">Next</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="next3" onclick="displayNextQuestions(3)">Next</button>
             <br>
         </div>
     </form>
 
-    <form id="set4" style="display:none;">
+    <form id="set4" onsubmit="saveToLocalStorage()" style="display:none;">
         <!-- Terms and Service Link-->
             <div class="col">
                 <input type="checkbox"> <label> I have read and accept the <a href="https://www.redditinc.com/policies/user-agreement">terms and conditions</a>.</label>
             </div>
         <br>
-        
+
         <!-- Create submit button-->
         <br>
-            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
         <br>
     </form>
+
+    <form id="set5" onsubmit="saveToLocalStorage()" style="display:none;">
+            <div class="form-group">
+                <label for="whyNoResponse">If you can create any syory (even a fictional one), what would be the plot of your story? (200 words or fewer)</label>
+                <textarea class="form-control" id="whyNoResponse" rows="10"></textarea>
+            </div>
 
         <!-- Create a page saying "thank you"-->
         <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display:none;">
@@ -210,34 +221,165 @@
     </div>
 
         <!-- Create script for next buttons-->
-        
-        <script>
-            function displayNextQuestions(set) {
-                // set is which set of questions was just displayed
-                if (set > 0 && set < 5) {
-                    // stop displaying the current next button 
-                    var lastButton = document.getElementById("next"+set);
-                    lastButton.style.display = "none";
-                    // start displaying the next set (questions+button)
-                    var nextQuestions = document.getElementById("set"+(set+1));
-                    nextQuestions.style.display = "block";
-                    // automatically scroll down to new questions
-                    window.location = "#set"+(set+1);
-                }
-            }
+    <script>
+        function displayNextQuestions(set) {
+            // Once next button is pressed, we're no longer talking about restored data.
+            document.getElementById("restored").style.display = "none";
 
-            function done() {
-                // let user know that these answers are DISAPPEARING FOREVER
-                alert('Where do these answers get stored?');
-                // stop displaying all of the alerts, questions, and buttons 
-                for (var i = 1; i < 5; i = i + 1) {
-                    var nextQuestions = document.getElementById("set"+i);
-                    nextQuestions.style.display = "none";
-                }
-                // start displaying the thanks alert
-                var thanksAlert = document.getElementById("thanks");
-                thanksAlert.style.display = "block";
+            // set is which set of questions was just displayed
+            if (set > 0 && set < 6) {
+                // stop displaying the current next button 
+                var lastButton = document.getElementById("next"+set);
+                lastButton.style.display = "none";
+                // start displaying the next set (questions+button)
+                var nextQuestions = document.getElementById("set"+(set+1));
+                nextQuestions.style.display = "block";
             }
+            // automatically scroll down to new questions
+            window.location = "#set"+(set+1);
+            // save number of last displayed set of questions in local storage
+            window.localStorage.setItem("lastDisplayedSet", set);
+            window.localStorage.setItem("fromNext", true);
+        }
+        function done() {
+            // Once submit button is pressed, we're no longer talking about restored data.
+            document.getElementById("restored").style.display = "none";
+            // Require feedback or explanation for no feedback
+            var responseAnswer = document.getElementById("response1").value;
+            var responseAnswer = document.getElementById("response2").value;
+            var responseAnswer = document.getElementById("response3").value;
+            var responseAnswer = document.getElementById("response4").value;
+            var responseAnswer = document.getElementById("response5").value;
+            if (responseAnswer === "" || responseAnswer.toLowerCase() === "n/a") {
+                var whyNoResponseAnswer = document.getElementById("whyNoResponse").value;
+                if (whyNoResponseAnswer === "") {
+                    displayNextQuestions(4);
+                    return;
+                }
+            }
+            // stop displaying all of the alerts, questions, and buttons 
+            for (var i = 1; i < 6; i = i + 1) {
+                var nextQuestions = document.getElementById("set"+i);
+                nextQuestions.style.display = "none";
+            }
+            // start displaying the thanks alert
+            var thanksAlert = document.getElementById("thanks");
+            thanksAlert.style.display = "block";
+            // not in the middle of form completion any more
+            window.localStorage.setItem("lastDisplayedSet", 0);
+        }
+        function saveToLocalStorage() {
+            // dataObject is an JSON Object; it has fields (no methods)
+            // Each field gets a name (on left of :)
+            //             and a value (on right of :)
+            // These field values are the current typed text in each textbox
+            var dataObject = {
+                "information1" :       document.getElementById("information1").value,
+                "information2" :       document.getElementById("information2").value,
+                "information3" :       document.getElementById("information3").value,
+                "information4" :       document.getElementById("information4").value,
+                "information5" :       document.getElementById("information5").value,
+                "information6" :       document.getElementById("information6").value,
+                "information7" :       document.getElementById("information7").value,
+                "information8" :       document.getElementById("information8").value,
+                "information9" :       document.getElementById("information9").value,
+                "information10" :      document.getElementById("information10").value,
+                "information11" :      document.getElementById("information11").value,
+                "information12" :      document.getElementById("information12").value,
+                "information13" :      document.getElementById("information13").value,
+                "information14" :      document.getElementById("information14").value,
+                "information15" :      document.getElementById("information15").value,
+                "choice1" :            document.getElementById("choice1").value,
+                "choice2" :            document.getElementById("choice2").value,
+                "choice3" :            document.getElementById("choice3").value,
+                "choice4" :            document.getElementById("choice4").value,
+                "choice5" :            document.getElementById("choice5").value,
+                "response1" :            document.getElementById("response1").value,
+                "response2" :            document.getElementById("response1").value,
+                "response3" :            document.getElementById("response1").value,
+                "response4" :            document.getElementById("response1").value,
+                "response5" :            document.getElementById("response1").value,
+            };
+            // Turn the data object into a string.
+            var dataObjectAsString = JSON.stringify(dataObject);
+            // Store the data object string in local storage in the variable named 'data'.
+            window.localStorage.setItem("data", dataObjectAsString);
+        }
+        function restoreFromLocalStorage() {
+            var fromNext = window.localStorage.getItem("fromNext");
+            if (fromNext === true) {
+                // We're restoring (window.onload) after next button press, so don't restore
+                window.localStorage.setItem("fromNext", false);
+                return;
+            }
+            // Don't restore and display data if form is complete; only Thanks alert needs displaying.
+            if (document.getElementById("thanks").style.display === "block") {
+                return;
+            }
+            // Get the data object string from local storage and try to turn it back into an object.
+            // This takes the data from local storage and sets the textbox to the values.
+            var dataObjectAsString = window.localStorage.getItem("data");
+            if (dataObjectAsString === null) {
+                return;
+            }
+            var dataObject = JSON.parse(dataObjectAsString);
+            if (dataObject === null) {
+                return;
+            }
+            // We successfully got a data object and now textboxk's can get the saved values.
+            document.getElementById("information").value = dataObject.knowledge;
+            // Display Restored alert at top of form
+            document.getElementById("restored").style.display = "block";
+            // Go through all previously-completed sets of questions and display them
+            var set = window.localStorage.getItem("lastDisplayedSet");
+            for (var i = 1; i <= set; i = i + 1) {
+                // stop displaying the current next button 
+                var lastButton = document.getElementById("next"+i);
+                lastButton.style.display = "none";
+                // start displaying the next set (questions+button)
+                var nextQuestions = document.getElementById("set"+(i+1));
+                nextQuestions.style.display = "block";
+            }
+            // automatically scroll down to new questions
+            window.location = "#set"+(set+1);
+        }
+        window.onload = function() { // Runs code on load
+            restoreFromLocalStorage();
+        };
+            function resetData() {
+            // Reset and clear form.
+            window.localStorage.setItem("lastDisplayedSet", 0);
+            // Make sure page does not claim it has restored data
+            document.getElementById("restored").style.display = "none";
+            // Make sure page does not claim its done.
+            document.getElementById("thanks").style.display = "none";
+            // Forget the previous data object that saved previous responses
+            window.localStorage.setItem("data", null);
+            // Clear all of the textboxes
+            document.getElementById("information1").value = "";
+            document.getElementById("information2").value = "";
+            document.getElementById("information3").value = "";
+            document.getElementById("information4").value = "";
+            document.getElementById("information5").value = "";
+            document.getElementById("information6").value = "";
+            document.getElementById("information7").value = "";
+            document.getElementById("information8").value = "";
+            document.getElementById("information9").value = "";
+            document.getElementById("information10").value = "";
+            document.getElementById("information11").value = "";
+            document.getElementById("information12").value = "";
+            document.getElementById("information13").value = "";
+            document.getElementById("information14").value = "";
+            document.getElementById("information15").value = "";
+            document.getElementById("choice1").value = "";
+            document.getElementById("choice2").value = "";
+            document.getElementById("choice3").value = "";
+            document.getElementById("choice4").value = "";
+            document.getElementById("choice5").value = "";
+
+            // scroll back to top of page
+            window.location.reload();
+        }
         </script>
     </body>
 </html>
