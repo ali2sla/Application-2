@@ -79,43 +79,43 @@
                     </div>
                     <div class="col">
                         <label for="information6">Day:</label>
-                        <textarea class="form-control" id="information7" rows="1">DD</textarea>
+                        <textarea class="form-control" id="information6" rows="1">DD</textarea>
                     </div>
                     <div class="col">
-                        <label for="information8">Year:</label>
-                        <textarea class="form-control" id="information8" rows="1">DD</textarea>
+                        <label for="information7">Year:</label>
+                        <textarea class="form-control" id="information7" rows="1">DD</textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="information9">Address:</label>
-                        <textarea class="form-control" id="information9" rows="1"></textarea>
+                        <label for="information8">Address:</label>
+                        <textarea class="form-control" id="information8" rows="1"></textarea>
                     </div>
                 <div class="col">
-                    <label for="information10">Email Address:</label>
-                    <textarea class="form-control" id="information10" rows="1"></textarea>
+                    <label for="information9">Email Address:</label>
+                    <textarea class="form-control" id="information9" rows="1"></textarea>
                 </div>
                 <div class="col">
-                    <label for="information11">Phone Number:</label>
-                    <textarea class="form-control" id="information11" rows="1"></textarea>
+                    <label for="information10">Phone Number:</label>
+                    <textarea class="form-control" id="information10" rows="1"></textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <label for="information12">City:</label>
-                    <textarea class="form-control" id="information12" rows="1"></textarea>
+                    <label for="information11">City:</label>
+                    <textarea class="form-control" id="information11" rows="1"></textarea>
                 </div>
                 <div class="col">
-                        <label for="information13">State/Province/Region:</label>
+                        <label for="information12">State/Province/Region:</label>
+                        <textarea class="form-control" id="information12" rows="1"></textarea>
+                </div>
+                <div class="col">
+                        <label for="information13">Zip code:</label>
                         <textarea class="form-control" id="information13" rows="1"></textarea>
                 </div>
                 <div class="col">
-                        <label for="information14">Zip code:</label>
+                        <label for="information14">Country:</label>
                         <textarea class="form-control" id="information14" rows="1"></textarea>
-                </div>
-                <div class="col">
-                        <label for="information15">Country:</label>
-                        <textarea class="form-control" id="information15" rows="1"></textarea>
                 </div>
             </div>
                 </div>
@@ -204,7 +204,7 @@
 
         <!-- Create submit button-->
         <br>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="next4" onclick="done()">Submit</button>
         <br>
     </form>
 
@@ -214,6 +214,11 @@
                 <textarea class="form-control" id="whyNoResponse" rows="10"></textarea>
             </div>
 
+            <br>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="done()">Submit</button>
+            <br>
+    </form>
+    
         <!-- Create a page saying "thank you"-->
         <div id="thanks" name="thanks" class="alert alert-primary" role="alert" style="display:none;">
                 Thank you for applying!
@@ -258,7 +263,7 @@
                 }
             }
             // stop displaying all of the alerts, questions, and buttons 
-            for (var i = 1; i < 6; i = i + 1) {
+            for (var i = 1; i < 5; i = i + 1) {
                 var nextQuestions = document.getElementById("set"+i);
                 nextQuestions.style.display = "none";
             }
@@ -288,7 +293,6 @@
                 "information12" :      document.getElementById("information12").value,
                 "information13" :      document.getElementById("information13").value,
                 "information14" :      document.getElementById("information14").value,
-                "information15" :      document.getElementById("information15").value,
                 "choice1" :            document.getElementById("choice1").value,
                 "choice2" :            document.getElementById("choice2").value,
                 "choice3" :            document.getElementById("choice3").value,
@@ -312,10 +316,12 @@
                 window.localStorage.setItem("fromNext", false);
                 return;
             }
+
             // Don't restore and display data if form is complete; only Thanks alert needs displaying.
             if (document.getElementById("thanks").style.display === "block") {
                 return;
             }
+
             // Get the data object string from local storage and try to turn it back into an object.
             // This takes the data from local storage and sets the textbox to the values.
             var dataObjectAsString = window.localStorage.getItem("data");
@@ -326,8 +332,33 @@
             if (dataObject === null) {
                 return;
             }
+
             // We successfully got a data object and now textboxk's can get the saved values.
-            document.getElementById("information").value = dataObject.knowledge;
+            document.getElementById("information1").value = dataObject.information1;
+            document.getElementById("information2").value = dataObject.information2;
+            document.getElementById("information3").value = dataObject.information3;
+            document.getElementById("information4").value = dataObject.information4;
+            document.getElementById("information5").value = dataObject.information5;
+            document.getElementById("information6").value = dataObject.information6;
+            document.getElementById("information7").value = dataObject.information7;
+            document.getElementById("information8").value = dataObject.information8;
+            document.getElementById("information9").value = dataObject.information9;
+            document.getElementById("information10").value = dataObject.information10;
+            document.getElementById("information11").value = dataObject.information11;
+            document.getElementById("information12").value = dataObject.information12;
+            document.getElementById("information13").value = dataObject.information13;
+            document.getElementById("information14").value = dataObject.information14;
+            document.getElementById("choice1").value = dataObject.choice1;
+            document.getElementById("choice2").value = dataObject.choice2;
+            document.getElementById("choice3").value = dataObject.choice3;
+            document.getElementById("choice4").value = dataObject.choice4;
+            document.getElementById("choice5").value = dataObject.choice5;
+            document.getElementById("response1").value = dataObject.response1;
+            document.getElementById("response2").value = dataObject.response2;
+            document.getElementById("response3").value = dataObject.response3;
+            document.getElementById("response4").value = dataObject.response4;
+            document.getElementById("response5").value = dataObject.response5;
+
             // Display Restored alert at top of form
             document.getElementById("restored").style.display = "block";
             // Go through all previously-completed sets of questions and display them
@@ -370,12 +401,16 @@
             document.getElementById("information12").value = "";
             document.getElementById("information13").value = "";
             document.getElementById("information14").value = "";
-            document.getElementById("information15").value = "";
             document.getElementById("choice1").value = "";
             document.getElementById("choice2").value = "";
             document.getElementById("choice3").value = "";
             document.getElementById("choice4").value = "";
             document.getElementById("choice5").value = "";
+            document.getElementById("response1").value = "";
+            document.getElementById("response2").value = "";
+            document.getElementById("response3").value = "";
+            document.getElementById("response4").value = "";
+            document.getElementById("response5").value = "";
 
             // scroll back to top of page
             window.location.reload();
