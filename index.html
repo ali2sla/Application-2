@@ -188,10 +188,15 @@
             <div class="col">
                 <label for="response5">Out of all of the animals in the world, which one do you want to meet and why? (200 words or fewer)</label>
                 <textarea class="form-control" id="response5" rows="10"></textarea>
+                <br>
+                <div class="form-group">
+                    <label for="mCharacters">Here is a random Chinese/Japanese character:</label>
+                    <textarea class="form-control" id="mCharacters" rows="1"></textarea>
+                </div>
+                <br>
             </div>
             <br>
             <button type="submit" class="btn btn-primary btn-lg btn-block" id="next3" onclick="displayNextQuestions(3)">Next</button>
-            <br>
         </div>
     </form>
 
@@ -226,6 +231,7 @@
 
         <!-- Create script for next buttons-->
     <script>
+        // Display next question
         function displayNextQuestions(set) {
             // Once next button is pressed, we're no longer talking about restored data.
             document.getElementById("restored").style.display = "none";
@@ -245,6 +251,43 @@
             window.localStorage.setItem("lastDisplayedSet", set);
             window.localStorage.setItem("fromNext", true);
         }
+
+        // Create code that would access APIs.
+        var getJSON = function(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                var status = xhr.status;
+                 if (status === 200) {
+                    callback(null, xhr.response);
+                } else {
+                    callback(status, xhr.response);
+                }
+            };
+            xhr.send();
+        };
+
+        // Generate random pokemon image
+        function randomIntFromInterval(min,max) {
+            // min and max included 
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        
+        function LanguageCharacters() {
+                var mCharactersDiv = document.getElementById('mCharacters');
+                getJSON('http://ccdb.hemiola.com/characters/',
+                function(err, data) {
+                    if (err !== null) {
+                        alert('Language API went wrong: ' + err);
+                    } else {
+                        var character = data[randomIntFromInterval(0, data.length)];
+                        mCharactersDiv.value = character.string;
+                    }
+                });
+            }
+
+        // Create done function
         function done() {
             // Once submit button is pressed, we're no longer talking about restored data.
             document.getElementById("restored").style.display = "none";
@@ -375,6 +418,7 @@
         }
         window.onload = function() { // Runs code on load
             restoreFromLocalStorage();
+            LanguageCharacters();
         };
             function resetData() {
             // Reset and clear form.
