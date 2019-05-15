@@ -288,6 +288,19 @@
                 });
             }
 
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                apiKey: "AIzaSyB3MORQTr33wDk1WZXZDkWIoQOHHt1glXA",
+                authDomain: "web-programming-88fcc.firebaseapp.com",
+                databaseURL: "https://web-programming-88fcc.firebaseio.com",
+                projectId: "web-programming-88fcc",
+                storageBucket: "web-programming-88fcc.appspot.com",
+                messagingSenderId: "466016322804",
+                appId: "1:466016322804:web:deba4c26e73d5958"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
         // Create done function
         function done() {
             // Once submit button is pressed, we're no longer talking about restored data.
@@ -315,7 +328,29 @@
             thanksAlert.style.display = "block";
             // not in the middle of form completion any more
             window.localStorage.setItem("lastDisplayedSet", 0);
-        }
+
+            // store data in Firebase
+            var dataObject = {
+                    "knowledge" :       document.getElementById("knowledge").value,
+                    "skills" :          document.getElementById("skills").value,
+                    "different" :       document.getElementById("different").value,
+                    "accomplishment" :  document.getElementById("accomplishment").value,
+                    "improve" :         document.getElementById("improve").value,
+                    "collaborate" :     document.getElementById("collaborate").value,
+                    "feedback" :        document.getElementById("feedback").value,
+                    "whyNoFeedback" :   document.getElementById("whyNoFeedback").value
+                };
+                var db = firebase.firestore();
+                db.collection("form").add(dataObject)
+                    .then(function(docRef) {
+                        console.log("Document written with ID: ", docRef.id);
+                        })
+                    .catch(function(error) {
+                        console.error("Error adding document: ", error);
+                    }
+                );
+            }
+            
         function saveToLocalStorage() {
             // dataObject is an JSON Object; it has fields (no methods)
             // Each field gets a name (on left of :)
