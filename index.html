@@ -277,7 +277,7 @@
         
         function LanguageCharacters() {
                 var mCharactersDiv = document.getElementById('mCharacters');
-                getJSON('ccdb.hemiola.com/characters/',
+                getJSON('https://cors.io/?http://ccdb.hemiola.com/characters/',
                 function(err, data) {
                     if (err !== null) {
                         alert('Language API went wrong: ' + err);
