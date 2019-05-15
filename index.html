@@ -192,6 +192,7 @@
                 <div class="form-group">
                     <label for="mCharacters">Here is a random Chinese/Japanese character:</label>
                     <textarea class="form-control" id="mCharacters" rows="1"></textarea>
+                    <button onclick="GenerateLanguage()">Generate</button>
                 </div>
                 <br>
             </div>
@@ -286,6 +287,9 @@
                     }
                 });
             }
+        function GenerateLanguage() {
+            LanguageCharacters();
+        }
 
         // Create done function
         function done() {
