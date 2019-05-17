@@ -477,16 +477,6 @@
                     return;
                 }
             }
-            // stop displaying all of the alerts, questions, and buttons 
-            for (var i = 1; i < 5; i = i + 1) {
-                var nextQuestions = document.getElementById("set"+i);
-                nextQuestions.style.display = "none";
-            }
-            // start displaying the thanks alert
-            var thanksAlert = document.getElementById("thanks");
-            thanksAlert.style.display = "block";
-            // not in the middle of form completion any more
-            window.localStorage.setItem("lastDisplayedSet", 0);
 
             // store data in Firebase
             var dataObject = {
@@ -515,6 +505,7 @@
                     "response4" :       document.getElementById("response4").value = "",
                     "response5" :       document.getElementById("response5").value = ""
                 };
+
                 var db = firebase.firestore();
                 db.collection("form").add(dataObject)
                     .then(function(docRef) {
@@ -524,6 +515,16 @@
                         console.error("Error adding document: ", error);
                     }
                 );
+                // stop displaying all of the alerts, questions, and buttons 
+                    for (var i = 0; i < 6; i = i + 1) {
+                    var nextQuestions = document.getElementById("set"+i);
+                    nextQuestions.style.display = "none";
+                }
+                // start displaying the thanks alert
+                    var thanksAlert = document.getElementById("thanks");
+                    thanksAlert.style.display = "block";
+                // not in the middle of form completion any more
+                    window.localStorage.setItem("lastDisplayedSet", 0);
             }
         </script>
     </body>
