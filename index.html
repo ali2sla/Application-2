@@ -269,12 +269,13 @@
             xhr.send();
         };
 
-        // Generate random pokemon image
-        function randomIntFromInterval(min,max) {
+        // Generate random characters
+                function randomIntFromInterval(min,max) {
             // min and max included 
             return Math.floor(Math.random()*(max-min+1)+min);
         }
         
+        // Create function for character
         function LanguageCharacters() {
                 var mCharactersDiv = document.getElementById('mCharacters');
                 getJSON('https://cors.io/?http://ccdb.hemiola.com/characters/',
@@ -300,56 +301,6 @@
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-
-        // Create done function
-        function done() {
-            // Once submit button is pressed, we're no longer talking about restored data.
-            document.getElementById("restored").style.display = "none";
-            // Require feedback or explanation for no feedback
-            var responseAnswer = document.getElementById("response1").value;
-            var responseAnswer = document.getElementById("response2").value;
-            var responseAnswer = document.getElementById("response3").value;
-            var responseAnswer = document.getElementById("response4").value;
-            var responseAnswer = document.getElementById("response5").value;
-            if (responseAnswer === "" || responseAnswer.toLowerCase() === "n/a") {
-                var whyNoResponseAnswer = document.getElementById("whyNoResponse").value;
-                if (whyNoResponseAnswer === "") {
-                    displayNextQuestions(4);
-                    return;
-                }
-            }
-            // stop displaying all of the alerts, questions, and buttons 
-            for (var i = 1; i < 5; i = i + 1) {
-                var nextQuestions = document.getElementById("set"+i);
-                nextQuestions.style.display = "none";
-            }
-            // start displaying the thanks alert
-            var thanksAlert = document.getElementById("thanks");
-            thanksAlert.style.display = "block";
-            // not in the middle of form completion any more
-            window.localStorage.setItem("lastDisplayedSet", 0);
-
-            // store data in Firebase
-            var dataObject = {
-                    "knowledge" :       document.getElementById("knowledge").value,
-                    "skills" :          document.getElementById("skills").value,
-                    "different" :       document.getElementById("different").value,
-                    "accomplishment" :  document.getElementById("accomplishment").value,
-                    "improve" :         document.getElementById("improve").value,
-                    "collaborate" :     document.getElementById("collaborate").value,
-                    "feedback" :        document.getElementById("feedback").value,
-                    "whyNoFeedback" :   document.getElementById("whyNoFeedback").value
-                };
-                var db = firebase.firestore();
-                db.collection("form").add(dataObject)
-                    .then(function(docRef) {
-                        console.log("Document written with ID: ", docRef.id);
-                        })
-                    .catch(function(error) {
-                        console.error("Error adding document: ", error);
-                    }
-                );
-            }
             
         function saveToLocalStorage() {
             // dataObject is an JSON Object; it has fields (no methods)
@@ -456,7 +407,8 @@
             restoreFromLocalStorage();
             LanguageCharacters();
         };
-            function resetData() {
+        
+        function resetData() {
             // Reset and clear form.
             window.localStorage.setItem("lastDisplayedSet", 0);
             // Make sure page does not claim it has restored data
@@ -494,6 +446,86 @@
             // scroll back to top of page
             window.location.reload();
         }
+
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyB3MORQTr33wDk1WZXZDkWIoQOHHt1glXA",
+                authDomain: "web-programming-88fcc.firebaseapp.com",
+                databaseURL: "https://web-programming-88fcc.firebaseio.com",
+                projectId: "web-programming-88fcc",
+                storageBucket: "web-programming-88fcc.appspot.com",
+                messagingSenderId: "466016322804",
+                appId: "1:466016322804:web:deba4c26e73d5958"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+        // Create done function
+        function done() {
+            // Once submit button is pressed, we're no longer talking about restored data.
+            document.getElementById("restored").style.display = "none";
+            // Require feedback or explanation for no feedback
+            var responseAnswer = document.getElementById("response1").value;
+            var responseAnswer = document.getElementById("response2").value;
+            var responseAnswer = document.getElementById("response3").value;
+            var responseAnswer = document.getElementById("response4").value;
+            var responseAnswer = document.getElementById("response5").value;
+            if (responseAnswer === "" || responseAnswer.toLowerCase() === "n/a") {
+                var whyNoResponseAnswer = document.getElementById("whyNoResponse").value;
+                if (whyNoResponseAnswer === "") {
+                    displayNextQuestions(4);
+                    return;
+                }
+            }
+            // stop displaying all of the alerts, questions, and buttons 
+            for (var i = 1; i < 5; i = i + 1) {
+                var nextQuestions = document.getElementById("set"+i);
+                nextQuestions.style.display = "none";
+            }
+            // start displaying the thanks alert
+            var thanksAlert = document.getElementById("thanks");
+            thanksAlert.style.display = "block";
+            // not in the middle of form completion any more
+            window.localStorage.setItem("lastDisplayedSet", 0);
+
+            // store data in Firebase
+            var dataObject = {
+                    "information1" :    document.getElementById("information1").value = "",
+                    "information2" :    document.getElementById("information2").value = "",
+                    "information3" :    document.getElementById("information3").value = "",
+                    "information4" :    document.getElementById("information4").value = "",
+                    "information5" :    document.getElementById("information5").value = "",
+                    "information6" :    document.getElementById("information6").value = "",
+                    "information7" :    document.getElementById("information7").value = "",
+                    "information8" :    document.getElementById("information8").value = "",
+                    "information9" :    document.getElementById("information9").value = "",
+                    "information10" :   document.getElementById("information10").value = "",
+                    "information11" :   document.getElementById("information11").value = "",
+                    "information12" :   document.getElementById("information12").value = "",
+                    "information13" :   document.getElementById("information13").value = "",
+                    "information14" :   document.getElementById("information14").value = "",
+                    "choice1" :         document.getElementById("choice1").value = "",
+                    "choice2" :         document.getElementById("choice2").value = "",
+                    "choice3" :         document.getElementById("choice3").value = "",
+                    "choice4" :         document.getElementById("choice4").value = "",
+                    "choice5" :         document.getElementById("choice5").value = "",
+                    "response1" :       document.getElementById("response1").value = "",
+                    "response2" :       document.getElementById("response2").value = "",
+                    "response3" :       document.getElementById("response3").value = "",
+                    "response4" :       document.getElementById("response4").value = "",
+                    "response5" :       document.getElementById("response5").value = ""
+                };
+                var db = firebase.firestore();
+                db.collection("form").add(dataObject)
+                    .then(function(docRef) {
+                        console.log("Document written with ID: ", docRef.id);
+                        })
+                    .catch(function(error) {
+                        console.error("Error adding document: ", error);
+                    }
+                );
+            }
+
         </script>
     </body>
 </html>
